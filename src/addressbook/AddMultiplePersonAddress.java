@@ -4,13 +4,15 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Iterator;
 import java.util.Scanner;
-public class AddPersonDetail {
+
+public class AddMultiplePersonAddress {
+
     public String name;
     public String address;
     public String city;
     public String state;
     public int phoneNumber;
-    AddPersonDetail(String name, String address, String state, String city, int phoneNumber){
+    AddMultiplePersonAddress(String name, String address, String state, String city, int phoneNumber){
 
         this.name=name;
         this.address=address;
@@ -18,6 +20,7 @@ public class AddPersonDetail {
         this.city=city;
         this.phoneNumber=phoneNumber;
     }
+
     public String getName() {
         return name;
     }
@@ -54,9 +57,8 @@ public class AddPersonDetail {
                 ""+state+   "\n City=" +city+
                 "\n PhoneNumber="+phoneNumber  ;
     }
-
     public static void main(String [] args) {
-        Collection<AddPersonDetail>c= new ArrayList<AddPersonDetail>();
+        Collection<AddPersonDetail> c= new ArrayList<AddPersonDetail>();
         Scanner sc=new Scanner(System.in);
         Scanner sc1=new Scanner(System.in);
         int ch;
@@ -89,8 +91,9 @@ public class AddPersonDetail {
                         System.out.println(e);
                     }
                     System.out.println("......................");
-                break;
+                    break;
             }
         } while (ch != 0);
     }
 }
+
